@@ -1,6 +1,7 @@
 package main
 
 func main() {
+	// var wg sync.WaitGroup
 	// pointerExample()
 	// variableExample()
 	// arraysExample()
@@ -10,5 +11,9 @@ func main() {
 	// goMainFunction()
 	// goStructs()
 	// goMapsMain()
-	goApiCallMain()
+	// goApiCallMain()
+	// ExampleGoRoutines()
+	// ExampleTimer()
+	ExampleOfChannels()
+
 }

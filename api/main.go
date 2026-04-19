@@ -1,15 +1,19 @@
 package main
 
 import (
-	"api-development/router"
-	"log"
-	"net/http"
+	"fmt"
+
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	r := router.New()
-	log.Println("started server at port 8080")
-	if err := http.ListenAndServe(":8080", r); err != nil {
-		log.Fatal("Failed to start the server")
-	}
+	router := gin.Default()
+
+	router.GET("/", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "go lang init api call",
+		})
+	})
+	fmt.Print("Server started at the port: 2000")
+	router.Run(":2000")
 }
